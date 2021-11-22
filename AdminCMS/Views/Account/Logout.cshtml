@@ -1,0 +1,24 @@
+﻿@model AdminCMS.Models.Account
+
+@{
+    ViewBag.Title = "Logout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Logout</title>
+</head>
+<body>
+    <div>
+        Welcome
+        @*<b>@HttpContext.Current.User.Identity.Name</b>
+            <br />*@
+        <br />
+        @using (Html.BeginForm("Logout", "Account", FormMethod.Post))
+        {
+            <a href="javascript:;" onclick="document.forms[0].submit();">Logout</a>
+        }
+    </div>
+</body>
+</html>
